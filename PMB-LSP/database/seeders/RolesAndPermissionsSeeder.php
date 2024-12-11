@@ -22,6 +22,8 @@ class RolesAndPermissionsSeeder extends Seeder
             ],
             'user' => [
             'create pendaftaran', 'read pendaftaran', 'read pengumuman'
+            ],
+            'guest' => [
             ]
         ];
 

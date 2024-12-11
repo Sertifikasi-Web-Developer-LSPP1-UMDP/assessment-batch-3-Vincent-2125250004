@@ -3,6 +3,8 @@
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PendaftaranController;
+use App\Http\Controllers\UserVerificationController;
+use App\Http\Controllers\UserVerifyController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -25,13 +27,18 @@ Route::middleware(['auth','role:admin'])->group(function () {
         return view('admin/adminDashboard');
     })->name('dashboardAdmin');
     Route::resource('pendaftaran', PendaftaranController::class)->except(['index','update']);
-    Route::get('pendaftaran', [PendaftaranController::class, 'index'])->name('pendaftaran.index');
     Route::put('/pendaftaran/{id}', [PendaftaranController::class, 'update'])->name('pendaftaran.update');
+    Route::get('/verifyUser', [UserVerifyController::class, 'index'])->name('verifyUser.index');
+    Route::put('/verifyUser/{id}', [UserVerifyController::class, 'update'])->name('verifyUser.update');
 
 });
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('pendaftaran', [PendaftaranController::class, 'index'])->name('pendaftaran.index');
+});
+
 Route::middleware(['auth','role:user'])->group(function () {
-    // Route::resource('pendaftaran', PendaftaranController::class);
+    // Route::get('pendaftaran', PendaftaranController::class);
 });
 
 require __DIR__.'/auth.php';
