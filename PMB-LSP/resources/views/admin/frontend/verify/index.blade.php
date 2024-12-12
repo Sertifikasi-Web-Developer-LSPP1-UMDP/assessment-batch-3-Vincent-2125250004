@@ -76,8 +76,8 @@
     <div id="verifikasiModal" class="hidden fixed inset-0 z-10 overflow-y-auto">
         <div class="flex items-center justify-center min-h-screen">
             <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-lg w-full">
-                <h2 class="text-lg font-semibold text-white">Verifikasi Akun</h2>
-                <p id="modalMessage" class="text-white"></p>
+                <h2 class="text-lg font-semibold text-black dark:text-white">Verifikasi Akun</h2>
+                <p id="modalMessage" class="text-black dark:text-white"></p>
                 <form id="verifyForm" method="POST">
                     @csrf
                     @method('PUT')
@@ -171,8 +171,9 @@
                     'bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-md';
 
                 // Update form action
-                $('#verifyForm').attr('action', `/verifyUser/${id}`);
-
+                const updateVerifyUrl = "{{ route('verifyUser.update', ':id') }}";
+                const actionUrl = updateVerifyUrl.replace(':id', id);
+                $('#verifyForm').attr('action', actionUrl);
                 // Show modal
                 $('#verifikasiModal').removeClass('hidden');
             };

@@ -81,6 +81,15 @@ class UserVerifyController extends Controller
 
         $userVerify = User::findOrFail($id);
         $userVerify->is_verified = $validated['is_verified'];
+
+        if ($validated['is_verified']) {
+            $userVerify->removeRole('guest');
+            $userVerify->assignRole('user');
+        } else {
+            $userVerify->removeRole('user');
+            $userVerify->assignRole('guest');
+        }
+
         $userVerify->save();
 
         return redirect()->route('verifyUser.index')->with('success', 'Status berhasil diperbarui.');

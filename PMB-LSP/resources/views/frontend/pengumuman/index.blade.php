@@ -54,26 +54,32 @@
                     @endif
                 </script>
             @endif
-
+            <div class="flex justify-end m-2 p-2">
+                <a href="{{ route('pengumuman.create') }}"
+                    class="inline-flex items-center px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-500 rounded-md font-semibold text-xs text-gray-700 dark:text-gray-300 uppercase tracking-widest shadow-sm hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 disabled:opacity-25 transition ease-in-out duration-150">
+                    Tambah Pengumuman
+                </a>
+            </div>
             <div class="relative overflow-x-auto">
                 <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 display responsive wrap"
                     width="100%" id="myTable">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-300 rounded-lg">
+                    <thead
+                        class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-300 rounded-lg">
                         <tr>
                             <th scope="col" class="px-6 py-3">
-                                Email
+                                Headline
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Nama
+                                Subheadline
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Jalur
+                                Content
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Program Studi
+                                Link Content
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                Status
+                                Image
                             </th>
                             <th scope="col" class="px-6 py-3">
                             </th>
@@ -112,29 +118,33 @@
 
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('pendaftaran.index') }}",
+                ajax: "{{ route('pengumuman.index') }}",
                 pageLength: 10, // Jumlah data per halaman
                 lengthMenu: [5, 10, 25, 50, 100], // Opsi jumlah data per halaman
                 searchDelay: 500,
                 columns: [{
-                        data: 'email',
-                        name: 'email'
+                        data: 'headline',
+                        name: 'headline'
                     },
                     {
-                        data: 'nama',
-                        name: 'nama'
+                        data: 'subHeadline',
+                        name: 'subHeadline'
                     },
                     {
-                        data: 'jalur',
-                        name: 'jalur'
+                        data: 'content',
+                        name: 'content'
                     },
                     {
-                        data: 'prodi1',
-                        name: 'prodi1'
+                        data: 'image',
+                        name: 'image',
+                        render: function(data) {
+                            return `<img src="/storage/images/${data}" alt="Image" class="w-16 h-16 rounded-md">`;
+                        }
+
                     },
                     {
-                        data: 'status',
-                        name: 'status'
+                        data: 'linkContent',
+                        name: 'linkContent'
                     },
                     {
                         data: 'action',
@@ -160,8 +170,6 @@
             $('#myTable_previous').addClass('text-black font-semibold dark:text-white me-4');
 
             $('.js-example-basic-single').select2();
-
-            // $('.js-example-basic-single').select2();
         });
 
         function confirmDelete(form) {

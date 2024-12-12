@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\DataPendaftaranRequest;
 use App\Models\Pendaftaran;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
@@ -40,15 +41,17 @@ class PendaftaranController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.frontend.pendaftaran.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(DataPendaftaranRequest $request)
     {
-        //
+        Pendaftaran::create(array_merge($request->validated(), ['user_id' => auth()->id()]));
+
+        return redirect()->route('pendaftaran.index')->with('success', 'Pendaftaran berhasil disimpan.');
     }
 
     /**

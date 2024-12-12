@@ -19,14 +19,13 @@
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('pendaftaran.index')" :active="request()->routeIs('pendaftaran.index')">
-                        {{ __('Pendaftaran Mahasiswa') }}
+                        {{ __('Pengelola Pendaftaran') }}
                     </x-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link>
-                        {{-- :href="route('')" :active="request()->routeIs('')" --}}
-                        {{ __('Pengumuman') }}
+                    <x-nav-link :href="route('pengumuman.index')" :active="request()->routeIs('pengumuman.index')">
+                        {{ __('Pengelola Pengumuman') }}
                     </x-nav-link>
                 </div>
 
