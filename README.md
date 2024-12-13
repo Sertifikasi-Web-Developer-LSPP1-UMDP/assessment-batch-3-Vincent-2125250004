@@ -1,35 +1,39 @@
-# Universitas KA
+# Universitas KA - Aplikasi Penerimaan Mahasiswa Baru 🎓
 
-Sebuah aplikasi perangkat lunak yang berupa sistem penerimaan mahasiswa baru
+Aplikasi ini adalah sistem untuk mengelola penerimaan mahasiswa baru di Universitas KA, yang mencakup fitur CRUD untuk pengumuman, autentikasi pengguna, pendaftaran mahasiswa, dan fitur login/register.
 
-## Fitur
+## 📌 Fitur Utama
 
-- CRUD Sistem Pengumuman
-- Pengelolaan Autentikasi dan Authorisasi User
-- Pengelolaan Pendaftaran
-- Login dan Register Akun
+- **CRUD Sistem Pengumuman** 📝
+- **Pengelolaan Autentikasi dan Authorisasi User** 🔒
+- **Pengelolaan Pendaftaran Mahasiswa** 🎓
+- **Login dan Register Akun** 🔑
 
-## Prasyarat
+## 🛠️ Prasyarat
 
-Pastikan Anda telah menginstal perangkat lunak berikut sebelum memulai:
+Sebelum memulai, pastikan perangkat lunak berikut sudah terpasang di sistem Anda:
 
-- [PHP](https://www.php.net/downloads.php) versi 8.x atau lebih tinggi
-- [Composer](https://getcomposer.org/) untuk mengelola dependencies PHP
-- [Node.js](https://nodejs.org/en/) dan [npm](https://www.npmjs.com/) (Laravel Breeze)
-- [MySQL](https://www.mysql.com/)untuk database
+- [PHP](https://www.php.net/downloads.php) versi 8.x atau lebih tinggi 🔧
+- [Composer](https://getcomposer.org/) untuk mengelola dependencies PHP 🎶
+- [Node.js](https://nodejs.org/en/) dan [npm](https://www.npmjs.com/) (digunakan oleh Laravel Breeze) 🚀
+- [MySQL](https://www.mysql.com/) untuk manajemen database 🗄️
+- [XAMPP](https://www.apachefriends.org/download.html)
 
-## Dependencies
+## 📦 Dependencies
 
-Pastikan Anda telah menginstal setiap dependencies digunakan:
-- [spatie/laravel-permission](https://spatie.be/docs/laravel-permission/v6/introduction) untuk Role dan Permission versi ^6.10 
-- [yajra/laravel-datatables-oracle](https://yajrabox.com/docs/laravel-datatables/11.0) Library untuk Table Interaktif versi ^11.1
-- [laravel/framework](https://laravel.com/) versi ^11.31 sebagai Framework PHP
-- [SweetAlert2](https://sweetalert2.github.io/#download) sebagai Notifikasi Peringatan
-- [Laravel Breeze](https://github.com/laravel/breeze) sebagai UI Scaffolding
-- [Tailwind CSS](https://tailwindcss.com/) sebagai Framework CSS
-- [Flowbite](https://flowbite.com/) sebagai Template Tailwind Component
-  
-## Instalasi
+Aplikasi ini membutuhkan beberapa dependencies berikut:
+
+- [spatie/laravel-permission](https://spatie.be/docs/laravel-permission/v6/introduction) untuk Role dan Permission (versi ^6.10) 🔑
+- [yajra/laravel-datatables-oracle](https://yajrabox.com/docs/laravel-datatables/11.0) untuk Table Interaktif (versi ^11.1) 📊
+- [laravel/framework](https://laravel.com/) (versi ^11.31) sebagai Framework PHP 💻
+- [SweetAlert2](https://sweetalert2.github.io/#download) untuk Notifikasi Peringatan ⚠️
+- [Laravel Breeze](https://github.com/laravel/breeze) untuk UI Scaffolding (Frontend) 🎨
+- [Tailwind CSS](https://tailwindcss.com/) sebagai Framework CSS 🌟
+- [Flowbite](https://flowbite.com/) untuk Template Tailwind Component 📦
+
+## 🚀 Instalasi
+
+Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan aplikasi:
 
 Ikuti langkah-langkah di bawah ini untuk menginstal aplikasi:
 
@@ -64,4 +68,11 @@ Ikuti langkah-langkah di bawah ini untuk menginstal aplikasi:
 ```bash
    npm run dev && php artisan serve
 ```
+## 📋 Kontribusi
+
+Jika Anda ingin berkontribusi pada proyek ini, harap fork repositori ini dan ajukan pull request. Semua kontribusi sangat dihargai! 🙏
+
+## 💬 Masalah & Dukungan
+
+Jika Anda mengalami masalah atau membutuhkan bantuan lebih lanjut, buka [issue](https://github.com/Sertifikasi-Web-Developer-LSPP1-UMDP/assessment-batch-3-Vincent-2125250004/issues) di GitHub atau hubungi saya di vincent.cent@mhs.mdp.ac.id.
 
