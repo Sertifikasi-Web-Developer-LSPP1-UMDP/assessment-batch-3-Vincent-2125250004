@@ -74,3 +74,10 @@ Jika Anda ingin berkontribusi pada proyek ini, harap fork repositori ini dan aju
 
 Jika Anda mengalami masalah atau membutuhkan bantuan lebih lanjut, buka [issue](https://github.com/Sertifikasi-Web-Developer-LSPP1-UMDP/assessment-batch-3-Vincent-2125250004/issues) di GitHub atau hubungi saya di vincent.cent@mhs.mdp.ac.id.
 
+## 📝 Lisensi
+
+Aplikasi ini dilisensikan di bawah [MIT License](https://opensource.org/licenses/MIT). Anda bebas untuk menggunakannya, mengubah, dan mendistribusikannya sesuai dengan ketentuan lisensi tersebut.
+
+### Hak Cipta
+
+© 2024 Assessment LSP Vincent. Semua hak dilindungi undang-undang.
