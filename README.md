@@ -66,7 +66,7 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan aplikasi:
    DB_USERNAME=username
    DB_PASSWORD=password
 ```
-8. **Lakukan Migration dan Seeder dengan perintah**
+7. **Lakukan Migration dan Seeder dengan perintah**
 ```bash
    php artisan migrate --seed
 ```
