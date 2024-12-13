@@ -57,12 +57,21 @@ Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan aplikasi:
 ```bash
    php artisan key:generate
 ```
-6. **Lakukan Migration dan Seeder dengan perintah**
+6. **Jalankan XAMPP dan Hubungan Database MySQL dari *phpmyadmin***
+```bash
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=name_database
+   DB_USERNAME=username
+   DB_PASSWORD=password
+```
+8. **Lakukan Migration dan Seeder dengan perintah**
 ```bash
    php artisan migrate --seed
 ```
 
-7. **Run Local Server dan NPM**
+8. **Run Local Server dan NPM**
 ```bash
    npm run dev && php artisan serve
 ```
