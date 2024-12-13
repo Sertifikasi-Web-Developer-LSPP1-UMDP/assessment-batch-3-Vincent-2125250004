@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Mengatur lebar kolom agar tidak terlalu lebar */
+.dataTables_wrapper .dataTables_scroll .dataTables_scrollBody {
+    max-width: 100% !important;
+}
+
+/* CSS untuk truncating teks pada tabel */
+table.dataTable td.truncate,
+table.dataTable th.truncate {
+    max-width: 150px;
+    /* Sesuaikan ukuran lebar */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Menambahkan border agar tampak rapi */
+table.dataTable {
+    table-layout: fixed;
+}

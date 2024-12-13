@@ -106,16 +106,6 @@
     <script>
         $(document).ready(function() {
             let table = $('#myTable').DataTable({
-                "rowCallback": function(row, data, index) {
-                    // Terapkan class ke baris (tr)
-                    $(row).addClass('bg-white border-b dark:bg-gray-800 dark:border-gray-700 ');
-                    $('td', row).each(function() {
-                        $(this).addClass(
-                            'px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white'
-                        );
-                    });
-                },
-
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('pengumuman.index') }}",
@@ -124,15 +114,24 @@
                 searchDelay: 500,
                 columns: [{
                         data: 'headline',
-                        name: 'headline'
+                        name: 'headline',
+                        render: function(data) {
+                            return `<span class="truncate" title="${data}">${data}</span>`;
+                        }
                     },
                     {
                         data: 'subHeadline',
-                        name: 'subHeadline'
+                        name: 'subHeadline',
+                        render: function(data) {
+                            return `<span class="truncate" title="${data}">${data}</span>`;
+                        }
                     },
                     {
                         data: 'content',
-                        name: 'content'
+                        name: 'content',
+                        render: function(data) {
+                            return `<span class="truncate" title="${data}">${data}</span>`;
+                        }
                     },
                     {
                         data: 'image',
@@ -140,11 +139,13 @@
                         render: function(data) {
                             return `<img src="/storage/images/${data}" alt="Image" class="w-16 h-16 rounded-md">`;
                         }
-
                     },
                     {
                         data: 'linkContent',
-                        name: 'linkContent'
+                        name: 'linkContent',
+                        render: function(data) {
+                            return `<span class="truncate" title="${data}">${data}</span>`;
+                        }
                     },
                     {
                         data: 'action',
@@ -152,7 +153,30 @@
                         orderable: false,
                         searchable: false
                     }
-                ]
+                ],
+                columnDefs: [{
+                        targets: [0, 1, 2, 4],
+                        className: 'truncate'
+                    } 
+                ],
+
+                rowCallback: (row) => {
+                    $(row).addClass('bg-white border-b dark:bg-gray-800 dark:border-gray-700 ');
+                    $('td', row).each(function() {
+                        $(this).addClass(
+                            'px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white'
+                        );
+                    });
+                },
+                drawCallback: () => {
+                    const pagination = $('#myTable_paginate');
+                    pagination.addClass('flex items-center justify-center mt-4');
+
+                    pagination.find('a').addClass(
+                        'mx-1 px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200'
+                    );
+                    pagination.find('.current').addClass('font-bold bg-blue-800 text-white');
+                }
 
             });
             $('#myTable_wrapper').addClass('overflow-y-hidden p-1');
@@ -192,48 +216,5 @@
             });
             return false;
         }
-        const updatePendaftaranUrl = "{{ route('pendaftaran.update', ':id') }}";
-
-        function openModal(id, status) {
-            $('#statusModal').removeClass('hidden');
-            const actionUrl = updatePendaftaranUrl.replace(':id', id);
-            $('#updateStatusForm').attr('action', actionUrl);
-            $('#status').val(status);
-        }
-
-        function closeModal() {
-            $('#statusModal').addClass('hidden');
-        }
     </script>
-
-
-    <!-- Modal -->
-    <div id="statusModal" class="hidden fixed z-10 inset-0 overflow-y-auto">
-        <div class="flex items-center justify-center min-h-screen">
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-lg w-full">
-                <h2 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-4">Ubah Status</h2>
-                <form id="updateStatusForm" method="POST">
-                    @csrf
-                    @method('PUT')
-                    <div class="mb-4">
-                        <label for="status" class="block text-gray-700 dark:text-gray-300">Pilih Status</label>
-                        <select id="status" name="status"
-                            class="block w-full mt-1 rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white">
-                            <option value="Lulus">Lulus</option>
-                            <option value="Seleksi Berkas">Seleksi Berkas</option>
-                            <option value="Tidak Lulus">Tidak Lulus</option>
-                        </select>
-                    </div>
-                    <div class="flex justify-end">
-                        <button type="button" onclick="closeModal()"
-                            class="bg-gray-500 text-white px-4 py-2 rounded-md mr-2">
-                            Batal
-                        </button>
-                        <button type="submit"
-                            class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md">Simpan</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 @endsection

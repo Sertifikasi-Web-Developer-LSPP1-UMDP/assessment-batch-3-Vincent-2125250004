@@ -50,6 +50,6 @@ class User extends Authenticatable
 
     public function pendaftaran()
     {
-        return $this->hasOne(Pendaftaran::class);
+        return $this->hasMany(Pendaftaran::class);
     }
 }

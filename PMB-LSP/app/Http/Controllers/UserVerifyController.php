@@ -14,10 +14,16 @@ class UserVerifyController extends Controller
     public function index(Request $request)
     {
         if ($request->ajax()) {
-            $data = User::role('guest')->get();
+            $data = User::whereHas('roles', function ($query) {
+                $query->whereIn('name', ['guest', 'user']);
+            })->get();
+
             return DataTables::of($data)
                 ->addColumn('is_verified', function ($row) {
                     return $row->is_verified ? 'Terverifikasi' : 'Belum Terverifikasi';
+                })
+                ->addColumn('role', function ($row) {
+                    return $row->roles->pluck('name')->join(', ');
                 })
                 ->addColumn('action', function ($row) {
                     return '
@@ -30,8 +36,8 @@ class UserVerifyController extends Controller
                 })
                 ->rawColumns(['action'])
                 ->make(true);
-
         }
+
         return view('admin.frontend.verify.index');
     }
     /**

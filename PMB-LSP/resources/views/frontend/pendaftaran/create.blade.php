@@ -89,18 +89,32 @@
                 </div>
                 <div class="grid md:grid-cols-2 md:gap-6">
                     <div class="relative z-0 w-full mb-5 group">
-                        <input type="text" name="agama" id="agama"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                            placeholder=" " required />
-                        <label for="agama"
-                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Agama</label>
+                        <div class="relative z-0 w-full mb-5 group">
+                            <label for="agama"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Agama</label>
+                            <select id="agama" name="agama" id="agama"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option disabled selected>Pilih Agama</option>
+                                <option value="Buddha">Buddha</option>
+                                <option value="Katolik">Katolik</option>
+                                <option value="Kristen">Kristen</option>
+                                <option value="Konghucu">Konghucu</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Islam">Islam</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="relative z-0 w-full mb-5 group">
-                        <input type="text" name="kewarganegaraan" id="kewarganegaraan"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                            placeholder=" " required />
-                        <label for="kewarganegaraan"
-                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Kewarganegaraan</label>
+                        <div class="relative z-0 w-full mb-5 group">
+                            <label for="kewarganegaraan"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Kewarganegaraan</label>
+                            <select id="kewarganegaraan" name="kewarganegaraan" id="kewarganegaraan"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option disabled selected>Pilih Kewarganegaraan</option>
+                                <option value="WNA">WNA</option>
+                                <option value="WNI">WNI</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="relative z-0 w-full mb-5 group">
@@ -109,7 +123,7 @@
                         placeholder=" " required />
                     <label for="noHP"
                         class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nomor
-                        Ponsel (123-456-7890)</label>
+                        Ponsel</label>
                 </div>
 
                 <div class="relative z-0 w-full mb-5 group">
@@ -145,12 +159,16 @@
                     </div>
 
                     <div class="relative z-0 w-full mb-2 group">
-                        <input type="text" name="waktuKuliah" id="waktuKuliah"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                            placeholder=" " required />
-                        <label for="waktuKuliah"
-                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Waktu
-                            Kuliah</label>
+                        <div class="relative z-0 w-full mb-5 group">
+                            <label for="waktuKuliah"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Waktu Kuliah</label>
+                            <select id="waktuKuliah" name="waktuKuliah" id="waktuKuliah"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option disabled selected>Pilih Waktu</option>
+                                <option value="Pagi">Pagi</option>
+                                <option value="Malam">Malam</option>
+                            </select>
+                        </div>
                     </div>
 
                     <div class="relative z-0 w-full mb-5 group">
@@ -162,12 +180,17 @@
                     </div>
 
                     <div class="relative z-0 w-full mb-5 group">
-                        <input type="text" name="statusPendaftaran" id="statusPendaftaran"
-                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                            placeholder=" " required />
-                        <label for="statusPendaftaran"
-                            class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Status
-                            Pendaftaran</label>
+                        <div class="relative z-0 w-full mb-5 group">
+                            <label for="statusPendaftaran"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Status
+                                Pendaftaran</label>
+                            <select id="statusPendaftaran" name="statusPendaftaran" id="statusPendaftaran"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                <option disabled selected>Pilih Status Pendaftaran</option>
+                                <option value="Mahasiswa Baru">Mahasiswa Baru</option>
+                                <option value="Mahasiswa Pindahan">Mahasiswa Pindahan</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="relative z-0 w-full mb-5 group">
@@ -180,59 +203,76 @@
                 </div>
 
                 <div class="relative z-0 w-full mb-5 group">
-                    <input type="text" name="jurusanSekolah" id="jurusanSekolah"
-                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                        placeholder=" " required />
-                    <label for="jurusanSekolah"
-                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Jurusan
-                        Sekolah</label>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <label for="jurusanSekolah"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Jurusan Sekolah</label>
+                        <select id="jurusanSekolah" name="jurusanSekolah" id="jurusanSekolah"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option disabled selected>Pilih Jurusan</option>
+                            <option value="IPA">IPA</option>
+                            <option value="IPS">IPS</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="relative z-0 w-full mb-5 group">
-                    <input type="text" name="referensi" id="referensi"
-                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                        placeholder=" " required />
-                    <label for="referensi"
-                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Referensi</label>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <label for="referensi"
+                            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Referensi</label>
+                        <select id="referensi" name="referensi" id="referensi"
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option disabled selected>Pilih Referensi</option>
+                            <option value="Teman">Teman</option>
+                            <option value="Saudara">Saudara</option>
+                            <option value="Dosen">Website</option>
+                            <option value="Mahasiswa">Social Media</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="relative z-0 w-full mb-5 group">
-                    <input type="text" name="informasi" id="informasi"
-                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                        placeholder=" " required />
-                    <label for="informasi"
-                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Informasi</label>
+                    <label for="informasi" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Sumber
+                        Informasi Pendaftaran</label>
+                    <select id="informasi" name="informasi" id="informasi"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option disabled selected>Pilih Informasi</option>
+                        <option value="Teman">Teman</option>
+                        <option value="Saudara">Saudara</option>
+                        <option value="Website">Website</option>
+                        <option value="Social Media">Social Media</option>
+                        <option value="Reklame">Reklame</option>
+                    </select>
                 </div>
 
                 <div class="relative z-0 w-full group mb-4">
-                    <label for="prodi" class="mb-4 text-sm text-gray-900 dark:text-gray-300">Program Studi yang
-                        ingin dituju</label>
+                    <label for="prodi" class="mb-4 text-sm text-gray-900 dark:text-gray-300">Program Studi yang ingin
+                        dituju</label>
                     <div class="grid md:grid-cols-2 md:gap-6 mt-2">
                         <div class="relative z-0 w-full mb-5 group">
-                            <input type="text" name="prodi1" id="prodi1"
-                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                                placeholder=" " required />
-                            <label for="prodi1"
-                                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Program
-                                Studi 1</label>
+                            <label for="prodi1" class="block text-sm text-gray-500 dark:text-gray-400">Program Studi
+                                1</label>
+                            <select name="prodi1" id="prodi1"
+                                class="block py-2 px-4 w-full text-sm text-gray-900 bg-gray-100 border border-gray-300 rounded-md dark:bg-gray-800 dark:border-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600">
+                                <option value="" disabled selected>Pilih Program Studi 1</option>
+                            </select>
                         </div>
 
                         <div class="relative z-0 w-full mb-5 group">
-                            <input type="text" name="prodi2" id="prodi2"
-                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                                placeholder=" " required />
-                            <label for="prodi2"
-                                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Program
-                                Studi 2</label>
+                            <label for="prodi2" class="block text-sm text-gray-500 dark:text-gray-400">Program Studi
+                                2</label>
+                            <select name="prodi2" id="prodi2"
+                                class="block py-2 px-4 w-full text-sm text-gray-900 bg-gray-100 border border-gray-300 rounded-md dark:bg-gray-800 dark:border-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600">
+                                <option value="" disabled selected>Pilih Program Studi 2</option>
+                            </select>
                         </div>
 
                         <div class="relative z-0 w-full mb-5 group">
-                            <input type="text" name="prodi3" id="prodi3"
-                                class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                                placeholder=" " required />
-                            <label for="prodi3"
-                                class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Program
-                                Studi 3</label>
+                            <label for="prodi3" class="block text-sm text-gray-500 dark:text-gray-400">Program Studi
+                                3</label>
+                            <select name="prodi3" id="prodi3"
+                                class="block py-2 px-4 w-full text-sm text-gray-900 bg-gray-100 border border-gray-300 rounded-md dark:bg-gray-800 dark:border-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600">
+                                <option value="" disabled selected>Pilih Program Studi 3</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -241,5 +281,53 @@
             </form>
         </div>
     </div>
-    </div>
+
+    <script>
+        const jurusanSelect = document.getElementById('jurusanSekolah');
+        const prodiDropdowns = ['prodi1', 'prodi2', 'prodi3'].map(id => document.getElementById(id));
+
+        const options = {
+            IPA: ['Teknik Elektro', 'DKV', 'Data Science', 'Informatika', 'Sistem Informasi'],
+            IPS: ['Manajemen', 'Perbankan', 'Perpajakan', 'Hukum', 'Akuntansi']
+        };
+
+        function updateDropdowns() {
+            const selectedJurusan = jurusanSelect.value;
+            const availableOptions = options[selectedJurusan] || [];
+
+            // Mengambil semua opsi yang telah dipilih
+            const selectedValues = prodiDropdowns.map(dropdown => dropdown.value).filter(val => val);
+
+            prodiDropdowns.forEach(dropdown => {
+                const currentValue = dropdown.value; // Simpan nilai saat ini
+                dropdown.innerHTML =
+                    '<option value="" disabled selected>Pilih Program Studi</option>'; // Menambahkan default option
+
+                availableOptions.forEach(option => {
+                    if (!selectedValues.includes(option) || option === currentValue) {
+                        const optionElement = document.createElement('option');
+                        optionElement.value = option;
+                        optionElement.textContent = option;
+
+                        // Tetap pertahankan nilai yang sudah dipilih
+                        if (option === currentValue) {
+                            optionElement.selected = true;
+                        }
+
+                        dropdown.appendChild(optionElement);
+                    }
+                });
+            });
+        }
+
+        // Event listener untuk jurusan sekolah
+        jurusanSelect.addEventListener('change', updateDropdowns);
+
+        // Event listener untuk setiap dropdown agar saling memengaruhi
+        prodiDropdowns.forEach(dropdown => {
+            dropdown.addEventListener('change', updateDropdowns);
+        });
+    </script>
+
+
 @endsection

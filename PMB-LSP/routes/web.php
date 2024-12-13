@@ -8,10 +8,9 @@ use App\Http\Controllers\PendaftaranController;
 use App\Http\Controllers\UserVerifyController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\WelcomePageController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WelcomePageController::class, 'welcome'])->name('welcome');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

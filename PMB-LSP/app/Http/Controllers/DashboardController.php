@@ -15,10 +15,10 @@ class DashboardController extends Controller
         // Jika pendaftaran tidak ditemukan, set status menjadi "Tidak Lulus" secara default
         if (!$pendaftaran) {
             $pendaftaran = (object) [
-                'status' => 'Tidak Lulus',
+                'status' => 'Belum Terdaftar',
             ];
         }
 
-        return view('dashboard', compact('pendaftaran'));
+        return view('dashboard', compact('pendaftaran' ,'user'));
     }
 }

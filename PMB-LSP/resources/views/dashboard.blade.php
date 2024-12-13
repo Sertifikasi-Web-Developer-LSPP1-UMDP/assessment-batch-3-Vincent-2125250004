@@ -8,53 +8,34 @@
 
 @section('content')
     <div class="py-12">
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
         @if (session()->has('success') || session()->has('danger') || session()->has('warning') || session()->has('info'))
-            <script>
-                function showToast(icon, message) {
-                    const Toast = Swal.mixin({
-                        toast: true,
-                        position: "top-end",
-                        showConfirmButton: false,
-                        timer: 3000,
-                        timerProgressBar: true,
-                        didOpen: (toast) => {
-                            toast.onmouseenter = Swal.stopTimer;
-                            toast.onmouseleave = Swal.resumeTimer;
-                        },
-                        willClose: (toast) => {
-                            if (toast.getAttribute('aria-live') === 'polite') {
-                                toast.style.transition = 'opacity 1s ease-out';
-                                toast.style.opacity = 0;
-                            }
-                        }
-                    });
+            <script defer>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const showToast = (icon, message) => {
+                        Swal.fire({
+                            toast: true,
+                            position: 'top-end',
+                            icon: icon,
+                            title: message,
+                            showConfirmButton: false,
+                            timer: 3000,
+                            timerProgressBar: true
+                        });
+                    };
 
-                    Toast.fire({
-                        icon: icon,
-                        title: message
-                    });
-                }
-
-                @if (session()->has('success'))
-                    showToast('success', "{{ session()->get('success') }}!");
-                @endif
-
-                @if (session()->has('danger'))
-                    showToast('error', "{{ session()->get('danger') }}!");
-                @endif
-
-                @if (session()->has('warning'))
-                    showToast('warning', "{{ session()->get('warning') }}!");
-                @endif
-
-                @if (session()->has('info'))
-                    showToast('info', "{{ session()->get('info') }}!");
-                @endif
+                    @foreach (['success', 'danger', 'warning', 'info'] as $type)
+                        @if (session()->has($type))
+                            showToast('{{ $type }}', "{{ session()->get($type) }}");
+                        @endif
+                    @endforeach
+                });
             </script>
         @endif
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+
+            <div class="grid md:grid-cols-2 md:gap-6">
                 <div
                     class="w-full p-4 text-center border border-gray-200 rounded-lg shadow sm:p-8
                     @if ($pendaftaran->status === 'Lulus') bg-green-100
@@ -69,6 +50,20 @@
                         @elseif ($pendaftaran->status === 'Lulus') text-green-600 font-bold
                         @else text-gray-500 dark:text-gray-400 @endif">
                         {{ $pendaftaran->status }}
+                    </p>
+                </div>
+                <div
+                    class="w-full p-4 text-center border border-gray-200 rounded-lg shadow sm:p-8
+                    @if ($user->is_verified === 1) bg-green-100
+                    @elseif ($user->is_verified === 0) bg-red-400 @endif
+                    dark:border-gray-700">
+                    <h5 class="mb-4 text-3xl font-bold text-gray-900 dark:text-white">Status Akun Anda</h5>
+                    <p
+                        class="mb-2 text-base sm:text-5xl 
+                        @if ($user->is_verified === 1) text-green-600 font-bold
+                        @elseif ($user->is_verified === 0) text-red-600 font-bold  
+                        @else text-gray-500 dark:text-gray-400 @endif">
+                        {{ $user->is_verified ? 'Verifikasi' : 'Belum terverifikasi' }}
                     </p>
                 </div>
             </div>
