@@ -35,8 +35,6 @@ Aplikasi ini membutuhkan beberapa dependencies berikut:
 
 Ikuti langkah-langkah di bawah ini untuk menginstal dan menjalankan aplikasi:
 
-Ikuti langkah-langkah di bawah ini untuk menginstal aplikasi:
-
 1. **Clone repositori ke komputer lokal Anda:**
 
 ```bash
