@@ -1,6 +1,9 @@
-# Universitas KA - Aplikasi Penerimaan Mahasiswa Baru 🎓
+# ![Vector](https://github.com/user-attachments/assets/ddcf3e4d-585b-4614-bedf-edfe1cb40a19) Universitas KA - Aplikasi Penerimaan Mahasiswa Baru 🎓
 
 Aplikasi ini adalah sistem untuk mengelola penerimaan mahasiswa baru di Universitas KA, yang mencakup fitur CRUD untuk pengumuman, autentikasi pengguna, pendaftaran mahasiswa, dan fitur login/register.
+
+## Dokumentasi
+![Screenshot (600)](https://github.com/user-attachments/assets/505ac940-fd2c-4916-ba58-faf7d5a381be)
 
 ## 📌 Fitur Utama
 
