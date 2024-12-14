@@ -50,6 +50,7 @@ Aplikasi ini membutuhkan beberapa dependencies berikut:
 - [Laravel Breeze](https://github.com/laravel/breeze) untuk UI Scaffolding (Frontend) 🎨
 - [Tailwind CSS](https://tailwindcss.com/) sebagai Framework CSS 🌟
 - [Flowbite](https://flowbite.com/) untuk Template Tailwind Component 📦
+- [JQuery](https://jquery.com/) support library untuk DataTables 📦
 
 ## 🚀 Instalasi
 
