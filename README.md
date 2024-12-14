@@ -21,7 +21,6 @@ Aplikasi ini adalah sistem untuk mengelola penerimaan mahasiswa baru di Universi
 ![Screenshot 2024-12-13 233111](https://github.com/user-attachments/assets/cfd27d31-1b15-4616-8caa-350f60243b8f)
 ![Screenshot 2024-12-13 233138](https://github.com/user-attachments/assets/581221af-d29c-4533-bca7-0a7f170d2292)
 ![Screenshot 2024-12-13 233154](https://github.com/user-attachments/assets/d875721f-efc4-4891-8cb6-f6552fb364be)
-![Screenshot 2024-12-13 233111](https://github.com/user-attachments/assets/d2157db2-e6b8-4289-86e0-71bb6422c064)
 
 ## 📌 Fitur Utama
 
